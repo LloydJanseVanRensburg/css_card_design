@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Oswald:wght@500&display=swap");
+
+:root {
+  --color-1: #e28525;
+  --color-2: #016972;
+  --color-3: #00403f;
+  --bgcolor-1: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  background: var(--bgcolor-1);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 15px;
+}
+
+.card {
+  flex: 1;
+  padding: 2.5rem;
+  width: 300px;
+}
+
+.bg-color1 {
+  background: var(--color-1);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.bg-color2 {
+  background: var(--color-2);
+}
+
+.bg-color3 {
+  background: var(--color-3);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card__icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card__circle {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: block;
+}
+
+.card__image {
+  width: 50px;
+  height: 50px;
+  margin-left: -1.5rem;
+}
+
+.card__title {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Oswald";
+  font-weight: 500;
+}
+
+.card__subtext {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #fff;
+  opacity: 0.7;
+  font-family: "Montserrat";
+  font-weight: 400;
+  margin: 1rem 0 5rem 0;
+}
+
+.bg-color1 .card__btn {
+  color: var(--color-1);
+}
+
+.bg-color2 .card__btn {
+  color: var(--color-2);
+}
+
+.bg-color3 .card__btn {
+  color: var(--color-3);
+}
+
+.card__btn {
+  padding: 10px 40px;
+  border: 1px solid #fff;
+  background: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-family: "Oswald";
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.card__btn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 4rem 0;
+    height: auto;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .bg-color1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .bg-color3 {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
